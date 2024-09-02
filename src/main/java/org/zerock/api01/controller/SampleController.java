@@ -1,6 +1,7 @@
 package org.zerock.api01.controller;
 
-import io.swagger.annotations.ApiOperation;
+//import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,7 +13,8 @@ import java.util.List;
 @RequestMapping("/api/sample")
 public class SampleController {
 
-    @ApiOperation("Sample GET doA")
+    //@ApiOperation("Sample GET doA")
+    @Operation(description = "Sample GET doA")
     @GetMapping("/doA")
     public List<String> doA() {
         return Arrays.asList("AAA", "BBB", "CCC");
